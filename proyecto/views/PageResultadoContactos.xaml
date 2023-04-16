@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.views.PageResultadoContactos">
+
+    <ContentPage.Content>
+
+
+        <ListView  x:Name="listaa"
+                       ItemsSource="{Binding listaaviewsSource}"
+                       HasUnevenRows=" true"
+                       IsPullToRefreshEnabled="True"
+                       IsRefreshing="{Binding IsRefreshing}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                             x:Name="Btneliminar "
+                             Text=" Eliminar "
+                             IsDestructive="True" 
+                             Clicked="Btneliminar_Clicked"
+                             CommandParameter="{Binding .}" >
+                            </MenuItem>
+                            <MenuItem
+                             x:Name=" Btnactualizar"
+                             Text="Actualizar"
+                             IsDestructive="False"
+                             Clicked="Btnactualizar_Clicked"                          
+                             CommandParameter="{Binding .}"
+                                ></MenuItem>
+                            <MenuItem
+                             x:Name=" Btncompartir"
+                             Text="Compartir"
+                             IsDestructive="False"
+                             Clicked="Btncompartir_Clicked"                          
+                             CommandParameter="{Binding .}"
+                                ></MenuItem>
+                            <MenuItem
+                             x:Name=" Btnllamar"
+                             Text=" Llamar"
+                             IsDestructive="False"
+                             Clicked="Btnllamar_Clicked"                          
+                             CommandParameter="{Binding .}"
+                                ></MenuItem>
+                        </ViewCell.ContextActions>
+
+                        <StackLayout BackgroundColor="#eee"
+                                       Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="{Binding id}"
+                                TextColor="LightSalmon" FontSize=" 20"/>
+                                <Label Text="{Binding nombre}"
+                                TextColor="Black"  HorizontalOptions="StartAndExpand" FontSize=" 20"/>
+                                <Label Text="{Binding pais}"
+                                TextColor="Black" HorizontalOptions="CenterAndExpand"  FontSize=" 20" />
+                                <Label Text="{Binding telefono}"
+                                TextColor="Black" HorizontalOptions="EndAndExpand" FontSize=" 20" />
+
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </ContentPage.Content>
+</ContentPage>

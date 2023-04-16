@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.views.PageReSitio">
+
+    <ContentPage.Content>
+        <StackLayout>
+         <ListView  x:Name="lista">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                             x:Name="Btneliminar "
+                             Text=" Eliminar "
+                             IsDestructive="True" 
+                             Clicked="Btneliminar_Clicked"
+                             CommandParameter="{Binding .}">
+                            </MenuItem>
+                            <MenuItem
+                             x:Name=" Btnubicacion"
+                             Text="Ubicacion"
+                             IsDestructive="False"
+                             Clicked="Btnubicacion_Clicked"                          
+                             CommandParameter="{Binding .}"
+                             ></MenuItem>
+                            <MenuItem
+                             x:Name=" Btnactualizar"
+                             Text="Actualizar"
+                             IsDestructive="False"
+                             Clicked="Btnactualizar_Clicked"                          
+                             CommandParameter="{Binding .}"
+                             ></MenuItem>
+                            <MenuItem
+                             x:Name=" Btncompartir"
+                             Text="Compartir"
+                             IsDestructive="False"
+                             Clicked="Btncompartir_Clicked"                          
+                             CommandParameter="{Binding .}"
+                             ></MenuItem>
+                        </ViewCell.ContextActions>
+
+ 
+                        <StackLayout>
+                            <Label Text="          Nombre                 Pais                 Lugar                 Latitud                 Longitud" FontSize=" 13"/>
+
+                            <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" >
+                                
+                                <Image Source="{Binding Path=foto}" />
+                                <Label Text="{Binding id}"
+                                TextColor="LightSalmon" FontSize=" 15" />
+                                <Label Text="{Binding nombre}"
+                                TextColor="Black" FontSize=" 15" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding pais}"
+                                TextColor="Black" FontSize=" 15" HorizontalOptions="CenterAndExpand"  />
+                                <Label Text="{Binding nota}"
+                                TextColor="Black" FontSize=" 15" HorizontalOptions="CenterAndExpand" />
+                                <Label Text="{Binding latitud}"
+                                TextColor="Black" FontSize=" 15" HorizontalOptions="EndAndExpand" />
+                                <Label Text="{Binding longitud}"
+                                TextColor="Black" FontSize=" 15" HorizontalOptions="EndAndExpand"  />
+                                
+                            </StackLayout>
+                    </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

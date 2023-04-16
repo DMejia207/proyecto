@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.views.PageActualizarSitio">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image x:Name="ucenmlog" Source="ucenmlogo.png" WidthRequest="200" HeightRequest="200" BackgroundColor="SeaShell"/>
+
+                <Image x:Name="foto" WidthRequest="200" HeightRequest="200" BackgroundColor="Aqua"/>
+
+                <Button x:Name="btnfoto" Text="Foto" Clicked="btnfoto_Clicked"                  
+                    Margin="30,10,30,0"
+                    BackgroundColor="Green"/>
+
+                <Label Text  ="  Id:" FontSize=" 20"/>
+                <Entry x:Name="Id" 
+                   Placeholder=" " 
+                   Keyboard="Text"
+                   BackgroundColor ="White" 
+                   TextColor="Black" 
+                   Margin="10,10,10,0"/>
+
+                <Label Text  ="  Nombre:" FontSize=" 20"/>
+                <Entry x:Name="txtnombre" Placeholder=" " Keyboard="Text" BackgroundColor ="White" 
+                   TextColor="Black" 
+                   Margin="10,10,10,0"/>
+
+                <Label Text  ="  Latitud:" FontSize=" 20"/>
+                <Entry x:Name="txtlatitud" Placeholder=" " Keyboard="Text" 
+                 
+                   Margin="10,10,10,0" IsEnabled="false"/>
+
+                <Label Text  ="  Longitud:" FontSize=" 20"/>
+                <Entry x:Name="txtlongitud" Placeholder=" " Keyboard="Text"  
+                   
+                   Margin="10,10,10,0" IsEnabled="false"/>
+
+                <Label Text  ="  Seleccione un Pais:" FontSize=" 20"/>
+                <Picker Title=" " Margin="10,10,10,0" x:Name="cbpais" BackgroundColor ="White" 
+                   TextColor="Black">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+
+                            <x:String>Guatemala (502)</x:String>
+                            <x:String>El salvador (503)</x:String>
+                            <x:String>Honduras (504)</x:String>
+                            <x:String>Costa Rica (506)</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text  ="  Nombre del Sitio:" FontSize=" 20"/>
+                <Entry x:Name="txtnota" Placeholder=" " Keyboard="Text" BackgroundColor ="White" 
+                   TextColor="Black"
+                   Margin="10,10,10,0"/>
+
+                <Button x:Name="btnguardar" Text="Guardar Sitio" Clicked="btnguardar_Clicked"                  
+                    Margin="10,10,10,0"
+                    BackgroundColor="Green"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

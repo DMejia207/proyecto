@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.views.PageInicial">
+
+    <StackLayout>
+
+        <Image x:Name="ucenmlog" Source="ucenmlogo.png" WidthRequest="200" HeightRequest="200" BackgroundColor="SeaShell"           />
+
+        <Button x:Name="btnagenda" Text="Agenda" Clicked="btnagenda_Clicked"                  
+                    BackgroundColor="Black"
+                    Margin="20,150,20,20"
+                    TextColor="White"
+                    BorderWidth="3"
+                    CornerRadius="20"
+                    WidthRequest="100"
+                    HeightRequest="60"/>
+
+        <Button x:Name="btnsitios" Text="Sitios" Clicked="btnsitios_Clicked"                  
+                    BackgroundColor="Black"
+                    Margin="20,150,20,20"
+                    TextColor="White"
+                    BorderWidth="3"
+                    CornerRadius="20"
+                    WidthRequest="100"
+                    HeightRequest="60"/>
+
+    </StackLayout>
+
+
+  
+
+
+
+
+
+</ContentPage>
+
+
